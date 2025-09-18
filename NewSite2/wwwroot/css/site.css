@@ -1,0 +1,276 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.card-img-uniform {
+    height: 300px;
+    object-fit: cover;
+}
+
+/* Custom Navbar Styles */
+.navbar-custom {
+    background-color: #28a745; /* Green background */
+}
+
+    .navbar-custom .navbar-toggler-icon {
+        position: relative;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        transition: background-color 0.3s; /* Smooth transition for bg colour */
+    }
+
+        .navbar-custom .navbar-toggler-icon::before,
+        .navbar-custom .navbar-toggler-icon::after {
+            content: '';
+            position: absolute;
+            width: 1.5rem;
+            height: 0.1rem;
+            background-color: #c0c0c0; /* Silver lines */
+            border-radius: 0.1rem;
+            left: 0;
+            transition: background-color 0.3s; /* Smooth transition for line colour */
+        }
+
+        .navbar-custom .navbar-toggler-icon::before {
+            top: calc(50% - 0.6rem); /* Position top line */
+        }
+
+        .navbar-custom .navbar-toggler-icon::after {
+            top: calc(50% + 0.4rem); /* Position bottom line */
+        }
+
+        /* Optional: Add middle line if needed */
+        .navbar-custom .navbar-toggler-icon .line-middle {
+            position: absolute;
+            width: 1.5rem;
+            height: 0.1rem;
+            background-color: #c0c0c0; /* Silver */
+            border-radius: 0.1rem;
+            top: calc(50% - 0.05rem); /* Center middle line */
+            left: 0;
+            transition: background-color 0.3s; /* Smooth transition for line colour */
+        }
+
+/* Custom styles for navbar-toggler button */
+.navbar-toggler {
+    border: 2px solid transparent; /* Default border */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+    /* Make the border white on focus and active states */
+    .navbar-toggler:focus,
+    .navbar-toggler:hover,
+    .navbar-toggler:active {
+        outline: none; /* Remove default outline */
+        box-shadow: none; /* Remove default shadow */
+        border-color: #c0c0c0 !important; /* Silver border */
+    }
+
+    /* Hide border when not focused or active */
+    .navbar-toggler:not(:focus):not(:hover):not(:active) {
+        border-color: transparent; /* Hide border when not focused or active */
+    }
+
+    /* Change burger icon color to purple on hover */
+    .navbar-toggler:hover .navbar-toggler-icon::before,
+    .navbar-toggler:hover .navbar-toggler-icon::after,
+    .navbar-toggler:hover .navbar-toggler-icon .line-middle {
+        background-color: #6f42c1; /* Purple lines */
+    }
+
+/* Adjust link colors to silver */
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #c0c0c0; /* Silver text color */
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Standard hover effect - remove/modify code as necessary */
+.navbar-custom .navbar-nav .nav-link:hover {
+    color: #6f42c1; /* Purple text color on hover */
+    background-color: #e2e3e5; /*Light grey background on hover (adjust as needed) */
+    text-decoration: none; /* Ensure no underline on hover */
+    border: 2px solid orange; /* Orange solid border on hover */
+}
+/* Hover effect for the brand */
+.navbar-custom .navbar-brand:hover {
+    color: #6f42c1; /* Purple text colour on hover */
+}
+
+
+.nav-link.active {
+    font-weight: 900;
+    color: hotpink;
+}
+
+/* customise the horizontal rule tag*/
+hr {
+    border: 0; /* Remove default border */
+    height: 2px; /* Set the height of the line */
+    background: #28a745; /* Set the background color (green in this example) */
+    /* Optionally, you can add a border-radius to give it rounded edges */
+    border-radius: 5px; /* Optional: Rounds the edges of the horizontal line */
+    margin: 20px 0; /* Adjust margin to space it out from surrounding content */
+}
+
+
+/* Custom Accordion Styles */
+.accordion-custom .accordion-header {
+    background-color: #28a745;
+    color: white;
+    border: 2px solid rgba(40, 167, 69, 0.5); /* Green border with 50% opacity using #28a745. You will need to convert the hex colour to rgb. 0.5 is the opacity value */
+    /*border: 2px solid white;*/ /*you could just use white to have space between tabs*/
+}
+
+    .accordion-custom .accordion-header .accordion-link {
+        color: white;
+        text-decoration: none;
+        border: none; /* Ensure no border around the text */
+        outline: none; /* Remove the default outline */
+        box-shadow: none; /* Remove any potential box shadow */
+    }
+
+        .accordion-custom .accordion-header .accordion-link:focus,
+        .accordion-custom .accordion-header .accordion-link:active,
+        .accordion-custom .accordion-header .accordion-link:focus-visible {
+            outline: none; /* Remove focus outline */
+            border: none; /* Remove border when active or focused */
+            box-shadow: none; /* Remove box shadow */
+        }
+
+        .accordion-custom .accordion-header .accordion-link:hover {
+            /*color: #5cd6d6;*/
+            color: hotpink;
+        }
+
+.accordion-custom .accordion-body {
+    background-color: white;
+    color: #28a745;
+}
+
+/* Ensure other card or link elements are not affected */
+.accordion-custom .card,
+.accordion-custom .btn {
+    border: none;
+}
+
+
+/*default card setting */
+.card {
+    border: 2px solid #DED99333; /* gold border with 20% opacity */
+    transition: border-color 0.3s ease; /* Smooth transition for border color changes */
+    /* Other card styles */
+    border-radius: 0.25rem; /* Optional: Rounded corners */
+}
+
+/* Base card styling */
+.card-rollover {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform, background-color, and box-shadow */
+    border: 1px solid #d1e2d1; /* Optional: Light border to enhance appearance */
+}
+
+    /* Hover effect for the card */
+    .card-rollover:hover {
+        transform: scale(1.05); /* Slightly scale up the card on hover */
+        background-color: #eafaf0; /* Change background color to pale green on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    }
+
+
+/*Carousel*/
+.carousel-control-prev span[aria-hidden="true"],
+.carousel-control-next span[aria-hidden="true"] {
+    color: #28a745; /* sets arrow colour */
+    font-size: 2rem; /* make arrows bigger */
+    font-weight: bold; /* optional, makes them thicker */
+}
+
+/*CUSTOMISE BUTTON*/
+/* === default look for main actions === */
+.btn.custom-btn {
+    background-color: #28a745; /* Green */
+    color: #fff; /* white text for contrast */
+    border: none; /* remove border */
+    outline: none; /* remove browser outline */
+    box-shadow: none; /* remove Bootstrap glow */
+}
+    /* Hover state for solid button */
+    .btn.custom-btn:hover {
+        background-color: #218838; /* darker green for hover */
+        color: #fff; /* keep text white */
+        outline: none; /* remove browser outline */
+        box-shadow: none; /* remove Bootstrap glow */
+    }
+
+    /* Focus and active states for solid button 
+   - keeps the button green 
+   - removes Bootstrap's blue glow */
+    .btn.custom-btn:focus,
+    .btn.custom-btn:focus-visible,
+    .btn.custom-btn:active,
+    .btn.custom-btn:active:focus,
+    .btn.custom-btn:active:focus-visible {
+        background-color: #28a745 !important; /* keep green */
+        border-color: #28a745 !important;
+        color: #fff !important;
+        outline: none !important;
+        box-shadow: none !important; /* remove Bootstrap glow */
+    }
+
+/*EXTRA CODE FOR FILTER MENU*/
+/* === OUTLINE BUTTON COLOUR (default look for filter buttons) === */
+.btn.custom-btn-outline {
+    background-color: transparent; /* see-through by default */
+    color: #28a745; /* green text */
+    border: 2px solid #28a745; /* green border */
+    outline: none; /* remove browser outline */
+    box-shadow: none; /* remove Bootstrap glow */
+}
+
+    /* Hover state for outline button 
+   - fills with green 
+   - text turns white */
+    .btn.custom-btn-outline:hover {
+        background-color: #28a745;
+        color: #fff;
+        outline: none; /* remove browser outline */
+        box-shadow: none; /* remove Bootstrap glow */
+    }
+
+    /* Focus and active states for outline button 
+   - makes the button look solid green when selected 
+   - removes Bootstrap's blue glow */
+    .btn.custom-btn-outline:focus,
+    .btn.custom-btn-outline:focus-visible,
+    .btn.custom-btn-outline:active,
+    .btn.custom-btn-outline:active:focus,
+    .btn.custom-btn-outline:active:focus-visible {
+        background-color: #28a745 !important;
+        border-color: #28a745 !important;
+        color: #fff !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
